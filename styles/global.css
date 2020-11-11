@@ -1,0 +1,69 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
+    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Hiragino Sans, Hiragino Kaku Gothic ProN, Arial, Yu Gothic, Meiryo, sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  /*color: #0070f3;*/
+  color: #0092C8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+code {
+  font-size: 0.8rem;
+}
+
+main h2 {
+  color: #B52323;
+  margin-top: 4rem;
+}
+
+/*code {
+  display: inline-block;
+  padding: 0.1em 0.25em;
+  color: #444;
+  background-color: #e7edf3;
+  border-radius: 3px;
+  border: solid 1px #d6dde4;
+}*/
+
+code {
+  display: inline-block;
+  padding: 0.1em 0.25em; /* 文字周りの余白 */
+  color:#C82A8D; /* 文字色 */
+  background-color: #F9F2F4; /* 背景色 */
+  border-radius: 3px; /* 角丸 */
+  border: solid 1px#F9F2F4; /* 枠線 */
+}
+
+main table {
+    border-collapse: collapse;
+}
+main th, td {
+    padding: 5px;
+    border: 1px solid gainsboro;
+}
+
+/*main table tr:nth-child(even){
+  background-color: #eee
+}*/
+
