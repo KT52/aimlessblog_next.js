@@ -111,7 +111,7 @@ if __name__ == '__main__':
     main()
 ```
 
-コメント部分が[前回](https://www.ravness.com/2018/12/linescraping/)のコードから変更したところ。
+コメント部分が[前回](https://www.ravness.com/posts/linenotify2)のコードから変更したところ。
 
 ## Herokuにデプロイ
 
