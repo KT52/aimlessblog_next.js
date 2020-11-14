@@ -67,3 +67,12 @@ main th, td {
   background-color: #eee
 }*/
 
+blockquote {
+    background-color: #e1faf7;
+    border-left: 5px solid #33dbc7
+}
+
+blockquote p {
+  margin:1rem;
+}
+

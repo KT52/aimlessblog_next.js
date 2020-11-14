@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { GA_TRACKING_ID } from "../lib/gtag.js";
-//import { ADDTHIS_TRACKING_ID } from "../lib/addthis";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -29,6 +28,7 @@ class MyDocument extends Document {
           `,
             }}
           />
+          {/* Google AdSense */}
           <script
             async
             src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"

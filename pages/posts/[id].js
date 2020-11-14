@@ -9,7 +9,6 @@ import Social from "../../components/social"
 import AdSense from "react-adsense";
 
 export default function Post({ postData }) {
-  const tags = postData.tag
   return (
     <Layout>
       <Head>
@@ -22,24 +21,32 @@ export default function Post({ postData }) {
         </div>
         <div>
           <div className={utilStyles.taglist}>Tag:</div>
-          {!Array.isArray(tags) ? (
+          {!Array.isArray(postData.tag) ? (
             <Link href={`/tags/${encodeURIComponent(postData.tag)}`}>
               <a className={utilStyles.taglist}>{postData.tag}</a>
             </Link>
           ) : (
-            tags.map((tag) => (
+            postData.tag.map((tag) => (
               <Link href={`/tags/${encodeURIComponent(tag)}`}>
                 <a className={utilStyles.taglist}>{tag}</a>
               </Link>
             ))
           )}
         </div>
+        <AdSense.Google
+          client="ca-pub-9772961045289102"
+          slot="9393011465"
+          style={{ display: "block" }}
+          format="auto"
+          responsive="true"
+          layoutKey="-gw-1+2a-9x+5c"
+        />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <Social slug={postData.slug} title={postData.title} />
       <AdSense.Google
-        client="ca-pub-7292810486004926"
-        slot="7806394673"
+        client="ca-pub-9772961045289102"
+        slot="3938415902"
         style={{ display: "block" }}
         format="auto"
         responsive="true"

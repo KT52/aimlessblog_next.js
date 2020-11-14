@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React, { useEffect } from "react";
+import React from "react";
 import utilStyles from "../styles/utils.module.css";
 
 export default function Page({pageIndex,total,setPageIndex}) {

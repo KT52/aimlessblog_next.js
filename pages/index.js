@@ -4,7 +4,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Page from "../components/page";
 
 const perPage = 10;
@@ -20,7 +20,6 @@ export async function getStaticProps() {
 
 export default function Home({allPostsData}) {
   const [pageIndex, setPageIndex] = useState(1);
-  console.log(pageIndex)
   const total = allPostsData.length
   return (
     <Layout home>
@@ -28,7 +27,7 @@ export default function Home({allPostsData}) {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p style={{ textAlign: "center", fontSize: "0.9rem" }}>
+        <p className={utilStyles.headsub}>
           Webアプリ制作やWebサービスの覚え書きブログ
         </p>
         <p>
@@ -44,13 +43,12 @@ export default function Home({allPostsData}) {
             .slice(pageIndex * perPage - 10, pageIndex * perPage)
             .map(({ id, date, title }) => (
               <li className={utilStyles.listItem} key={id}>
+                <small className={utilStyles.lightText}>
+                  <Date dateString={date} />
+                </small><br />
                 <Link href="/posts/[id]" as={`/posts/${id}`}>
                   <a>{title}</a>
                 </Link>
-                <br />
-                <small className={utilStyles.lightText}>
-                  <Date dateString={date} />
-                </small>
               </li>
             ))}
         </ul>

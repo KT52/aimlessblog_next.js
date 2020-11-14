@@ -55,6 +55,7 @@
   display: inline-block;
   color: #999;
   margin-right: 0.5rem;
+  margin-left: auto;
 }
 
 .pagination {
@@ -88,4 +89,9 @@
 
 .button {
   margin-left: 0.5rem;
+}
+
+.headsub{
+  text-align: center;
+  font-size: 0.9rem;
 }
