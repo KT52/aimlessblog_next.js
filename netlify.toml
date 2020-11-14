@@ -3,3 +3,6 @@ from = "/:year/:month/:slug/"
 to = "/posts/:slug/"
 status = 301
 force = true
+
+[[plugins]]
+package = "@netlify/plugin-sitemap"
