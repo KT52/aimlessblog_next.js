@@ -17,7 +17,7 @@ export default function Layout({ children, home, tags }) {
         />
         <meta
           property="og:image"
-          contente="/squigly_3.png"
+          contente="https://www.ravness.com/squigly_3.png"
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
