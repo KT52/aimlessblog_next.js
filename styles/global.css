@@ -37,15 +37,6 @@ main h2 {
   margin-top: 4rem;
 }
 
-/*code {
-  display: inline-block;
-  padding: 0.1em 0.25em;
-  color: #444;
-  background-color: #e7edf3;
-  border-radius: 3px;
-  border: solid 1px #d6dde4;
-}*/
-
 code {
   display: inline-block;
   padding: 0.1em 0.25em; /* 文字周りの余白 */
@@ -62,10 +53,6 @@ main th, td {
     padding: 5px;
     border: 1px solid gainsboro;
 }
-
-/*main table tr:nth-child(even){
-  background-color: #eee
-}*/
 
 blockquote {
     background-color: #e1faf7;

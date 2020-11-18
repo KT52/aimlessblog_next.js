@@ -14,7 +14,6 @@ export async function getStaticProps() {
 }
 
 export default function Tags({allTags}) {
-    console.log(allTags)
     return (
       <Layout>
         <Head>
