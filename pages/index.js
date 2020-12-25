@@ -45,8 +45,9 @@ export default function Home({allPostsData}) {
               <li className={utilStyles.listItem} key={id}>
                 <small className={utilStyles.lightText}>
                   <Date dateString={date} />
-                </small><br />
-                <Link href="/posts/[id]" as={`/posts/${id}`}>
+                </small>
+                <br />
+                <Link href={`/posts/${encodeURIComponent(id)}`}>
                   <a>{title}</a>
                 </Link>
               </li>

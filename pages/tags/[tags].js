@@ -1,5 +1,5 @@
 import Layout, { siteTitle } from "../../components/layout";
-import { getTags, getTagsPosts } from "../../lib/posts";
+import { getTags, getAssociatedPosts } from "../../lib/posts";
 import Head from "next/head";
 import utilStyles from "../../styles/utils.module.css";
 import Link from "next/link";
@@ -19,13 +19,13 @@ export default function TagsPosts({ postData,tag }) {
         <ul className={utilStyles.list}>
           {postData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${encodeURIComponent(id)}`}>
-                <a>{title}</a>
-              </Link>
-              <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
+              <br />
+              <Link href={`/posts/${encodeURIComponent(id)}`}>
+                <a>{title}</a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -51,7 +51,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const tag = params.tags;
-  const postData = await getTagsPosts(tag);
+  const postData = await getAssociatedPosts(tag);
   return {
     props: {
       postData,
