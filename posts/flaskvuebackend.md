@@ -15,7 +15,7 @@ FlaskとVue.jsでCRUD機能のついた簡単なWebアプリ（ブックリス�
 
 vue_apiディレクトリの下にfrontend(vue.js)とbackend(flask)ディレクトリを作成。
 flaskは一応モデルだけ分離して作成しています。  
-flaskとvueの連携については[前回の記事](https://ravness.com/2019/12/flaskvue/)を参照してください。
+flaskとvueの連携については[前回の記事](https://www.ravness.com/posts/flaskvue)を参照してください。
 
 ```txt
 vue_api

@@ -8,7 +8,7 @@ tag:
 slug: flasksqlalchemy_wtfoms2
 ---
 
-[前回](https://www.ravness.com/2019/07/flasksqlalchemy_wtfoms1/)のSQLAlchemyの基本を抑えたところで、Flask-WTFを使って
+[前回](https://www.ravness.com/posts/flasksqlalchemy_wtfoms1)のSQLAlchemyの基本を抑えたところで、Flask-WTFを使って
 フォームからSQLAlchemyを動かしてみます。
 
 ## Flask-WTF

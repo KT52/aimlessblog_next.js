@@ -197,7 +197,7 @@ CRUD全ての機能が必要ならDynamoDBやRDSを使わないとダメそう�
 ## NetlifyやFirebase Hostingと組み合わせる
 
 データを読み取ることができるのがわかったので、Netlifyと組み合わせて使ってみました。  
-1からファイルを作成するのは面倒なので過去記事（[FlaskとVue.js(Vue CLI)の連携](http://localhost:1313/2019/12/flaskvue/)、[バックエンド編](http://localhost:1313/2019/12/flaskvuebackend/)、[フロントエンド編](http://localhost:1313/2019/12/flaskvuefrontend/))のファイルを少し変えてデプロイしてみました。
+1からファイルを作成するのは面倒なので過去記事（[FlaskとVue.js(Vue CLI)の連携](https://www.ravness.com/posts/flaskvue)、[バックエンド編](https://www.ravness.com/posts/flaskvuebackend)、[フロントエンド編](https://www.ravness.com/posts/flaskvuefrontend))のファイルを少し変えてデプロイしてみました。
 
 変更点は
 ```py

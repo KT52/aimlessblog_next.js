@@ -9,7 +9,7 @@ slug: linescraping
 
 ## はじめに
 
-[前回](https://www.ravness.com/2018/11/linenotify/)のLINE Notifyの利用が思いのほか簡単だったので、今回はスクレイピングしたものをLINE Notifyで通知するテスト。
+[前回](https://www.ravness.com/posts/linenotify)のLINE Notifyの利用が思いのほか簡単だったので、今回はスクレイピングしたものをLINE Notifyで通知するテスト。
 
 ## スクレイピング素材
 

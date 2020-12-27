@@ -64,7 +64,7 @@ Freeプランでどれくらい利用できるのかというと、
 
 ## GitHubにpushする前にすること  
 
-Pelicanの使用法は[コチラ](https://www.ravness.com/2018/03/pelicangithub/) に書いたので省略。
+Pelicanの使用法は[コチラ](https://www.ravness.com/posts/pelicangithub) に書いたので省略。
 
 - .gitignoreファイルを作成してoutputディレクトリをgitの管理から除外する。  
 

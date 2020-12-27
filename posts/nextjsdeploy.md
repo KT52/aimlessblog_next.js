@@ -13,7 +13,7 @@ slug: nextjsdeploy
 
 Next.jsをNetlify、Firebase Hosting、Google App Engineにデプロイするときの設定などのメモ。  
 今後他のサービスにデプロイした場合は追記するかも。  
-Vercel（旧 Zeit Now）は[前回](https://www.ravness.com/2020/04/nowflasknextjs/)紹介したので省略。
+Vercel（旧 Zeit Now）は[前回](https://www.ravness.com/posts/nowflasknextjs)紹介したので省略。
 
 ## Netlify
 

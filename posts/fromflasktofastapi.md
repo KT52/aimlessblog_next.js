@@ -8,7 +8,7 @@ tag:
 slug: fromflasktofastapi
 ---
 
-過去に公開した[FlaskとVueでCRUD操作（バックエンド編）](https://www.ravness.com/2019/12/flaskvuebackend/)をFastAPIで書いてみました。  
+過去に公開した[FlaskとVueでCRUD操作（バックエンド編）](https://www.ravness.com/posts/flaskvuebackend)をFastAPIで書いてみました。  
 
 FastAPIのドキュメントを読んだり（ほぼチュートリアルしか読んでない）、実際に書いてみた感想としては、
 

@@ -11,7 +11,7 @@ slug: datastorecsv2
 今回はGoogle Cloud Platform (GCP)のデータストアにbulkloaderを使わずにGoogle App Engine（GAE)経由でcsvファイルを一括でアップロードします。
 言語はPython。フレームワークはFlaskを使用。
 
-bulkloaderを使う方法はこちら→[GCPのデータストアにcsvのデータを一括で登録する](https://www.ravness.com/2018/08/datastorecsv)
+bulkloaderを使う方法はこちら→[GCPのデータストアにcsvのデータを一括で登録する](https://www.ravness.com/posts/datastorecsv)
 
 ### app.yaml
 ---
