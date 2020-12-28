@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/2018/07/laravelmail/", "destination": "/posts/laravelmail" },
+    { "source": "/2018/07/netlifydomain/", "destination": "posts/netlifydomain"}
+  ]
+}
