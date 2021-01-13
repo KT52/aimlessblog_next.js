@@ -53,7 +53,28 @@ export default function Home({allPostsData}) {
               </li>
             ))}
         </ul>
-        <Page total={total} setPageIndex={setPageIndex} pageIndex={pageIndex} />
+        {/*<Page total={total} setPageIndex={setPageIndex} pageIndex={pageIndex} />*/}
+        <div className={utilStyles.pagination}>
+          <div>
+            {pageIndex > 1 ? (
+              <Link href="/">
+                <a onClick={() => setPageIndex(pageIndex - 1)}>Prev</a>
+              </Link>
+            ) : (
+              ""
+            )}
+          </div>
+          <span className={utilStyles.next}>
+            {/* Math.floorで切り捨てMath.ceilで切り上げ */}
+            {pageIndex !== Math.ceil(total / 10) ? (
+              <Link href="/">
+                <a onClick={() => setPageIndex(pageIndex + 1)}>Next</a>
+              </Link>
+            ) : (
+              ""
+            )}
+          </span>
+        </div>
       </section>
     </Layout>
   );
