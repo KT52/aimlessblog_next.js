@@ -224,7 +224,7 @@ add() {
 
 これでFlaskとVue.jsで作った簡易アプリにCRUD機能を実装できました。  
 
-ソースコードは[こちら](https://github.com/Squigly77/flask_vue_sample)から。
+~~ソースコードは[こちら](https://github.com/Squigly77/flask_vue_sample)から。~~
 
 ## 参考
 
