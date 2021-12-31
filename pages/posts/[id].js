@@ -11,10 +11,10 @@ import hljs from "highlight.js";
 import { useEffect } from "react"
 
 export default function Post({ postData }) {
-  useEffect(() => {
+  /*useEffect(() => {
     hljs.initHighlighting();
     hljs.initHighlighting.called = false;
-  },[]);
+  },[]);*/
   return (
     <Layout>
       <Head>
