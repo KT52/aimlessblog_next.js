@@ -4,11 +4,17 @@ import Head from "next/head";
 import Date from "../../components/date";
 import Link from "next/link";
 import utilStyles from "../../styles/utils.module.css";
-import "highlight.js/styles/dracula.css";
+import 'highlight.js/styles/github-dark.css';
 import Social from "../../components/social"
 import AdSense from "react-adsense";
+import hljs from "highlight.js";
+import { useEffect } from "react"
 
 export default function Post({ postData }) {
+  useEffect(() => {
+    hljs.initHighlighting();
+    hljs.initHighlighting.called = false;
+  },[]);
   return (
     <Layout>
       <Head>
