@@ -18,7 +18,7 @@ CodeIgniter利用者のほとんどが要らないと思っているURLにindex.
 .htaccessの設定は[CodeIgniterの日本語ドキュメント](https://codeigniter.jp/user_guide/3/general/urls.html)
 と同じで
 
-```apache
+```
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

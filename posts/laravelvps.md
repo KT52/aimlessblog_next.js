@@ -68,7 +68,7 @@ Laravelを使用するにはpublicディレクトリをドキュメントルー�
 
 `sudo vim /etc/httpd/conf/httpd.conf`でhttpd.confの一番下に下記を追加する。  
 
-```apache
+```
 NameVirtualHost *:80
 <VirtualHost *:80>
 DocumentRoot /var/www/html/プロジェクト名/public
