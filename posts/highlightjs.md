@@ -67,7 +67,8 @@ const processedContent = await unified()
 ```
 
 に変更します。
-あとは_app.jsに`import 'highlight.js/styles/github-dark.css';`みたいにcssを読み込めばシンタックスハイライトが適用されます。
+あとは_app.jsに`import 'highlight.js/styles/github-dark.css';`みたいにcssを読み込めばシンタックスハイライトが適用されます。  
+highlight.jsを入れてないなら`npm install highlight.js`で入れておくこと。
 
 
 ## レンダー後にシンタックスハイライトを適用する場合
