@@ -14,7 +14,7 @@ READMEに「もうこのパッケージは推奨されません。remarkからre
 当ブログもrehypeに替えました。
 大掛かりな変更はないのですが念のため備忘録として残しておきます。
 
-remarkとrehypeの違いについては[こちらの記事](https://qiita.com/sankentou/items/f8eadb5722f3b39bbbf8)を参照してください。
+remarkとrehypeの違いについては[Next.js のための Remark / Rehype 入門](https://qiita.com/sankentou/items/f8eadb5722f3b39bbbf8)を参照してください。
 
 ## パッケージをインストール
 
