@@ -91,7 +91,7 @@ systemctl restart httpd
 
 `sudo vim /etc/nginx/conf.d/default.conf`で6行目付近の
 
-```nginx
+```
 location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
@@ -100,7 +100,7 @@ location / {
 
 を
 
-```nginx
+```
 location / {
         root   /var/www/html/プロジェクト名/public;　#ドキュメントルートの変更
         index  index.php index.html index.htm;　#index.phpを追加
@@ -112,7 +112,7 @@ location / {
 
 36行目付近の
 
-```nginx
+```
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 
         location ~ \.php$ {
@@ -126,7 +126,7 @@ location / {
 
 を
 
-```nginx
+```
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 
     location ~ \.php$ {

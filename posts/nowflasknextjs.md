@@ -52,14 +52,14 @@ buildコマンドはVercelで自動で設定されるので要らないかもし
 `.next`と`out`ディレクトリがすでに存在するならpackage.jsonと同じ場所に、`.nowignore`ファイルを作成して  
 除外設定をしておきます。
 
-```cmd
+```
 /.next
 /out
 ```
 
 デプロイは
 
-```cmd
+```
 now
 ```
 
@@ -90,7 +90,7 @@ deployとbuildがエラー無しで成功するとaaaaa-xxxxx.now.shというURL
 nowコマンドはデプロイするたびにxxxxxの部分がユニークな英数字のURLを作成してしまうので、  
 プロダクション環境で使う場合は
 
-```cmd
+```
 now --prod
 ```
 

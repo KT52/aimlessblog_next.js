@@ -28,7 +28,7 @@ Heroku CLIをダウンロード。
 
 必要なライブラリをここに記入。最初にデプロイするときにpipからインストールしてくれます。  
 
-```cmd
+```
 beautifulsoup4==4.6.3
 requests==2.20.1
 bottle==0.12.15
@@ -64,7 +64,7 @@ run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
 
 使用するpythonのバージョンを記述
 
-```cmd
+```
 python-3.6.5
 ```
 

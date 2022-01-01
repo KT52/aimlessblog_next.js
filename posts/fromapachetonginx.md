@@ -16,13 +16,13 @@ Apache環境下でPHP7.3とMariaDBを使用していました。
 
 ApacheとNginxを併用したりはしないのでApacheを止めます。
 
-```cmd
+```
 sudo systemctl stop httpd
 ```
 
 自動起動も停止
 
-```cmd
+```
 sudo systemctl disable httpd
 ```
 
@@ -33,12 +33,12 @@ ngninxをインストールするためにリポジトリを追加します。
 
 **/etc/yum.repos.d/** 内に **nginx.repo** を作成。
 
-```cmd
+```
 sudo vim /etc/yum.repos.d/nginx.repo
 ```
 
 以下をnginx.repoにコピペ
-```cmd
+```
 [nginx]
 name=nginx repo
 baseurl=http://nginx.org/packages/mainline/centos/7/$basearch/
@@ -49,19 +49,19 @@ enabled=1
 ## nginxのインストール
 ---
 
-```cmd
+```
 sudo yum -y --enablerepo=nginx install nginx
 ```
 
 インストールが成功したら起動。
 
-```cmd
+```
 sudo systemctl start nginx
 ```
 
 ステイタス確認
 
-```cmd
+```
 sudo systemctl status nginx
 ```
 
@@ -69,7 +69,7 @@ sudo systemctl status nginx
 
 自動起動設定
 
-```cmd
+```
 sudo systemctl enable nginx
 ```
 
@@ -82,7 +82,7 @@ sudo systemctl enable nginx
 
 Apache（モジュール版）と違いNginxではPHPをFastCGIを通して実行するのでphp-fpmを導入する必要があります。  
 
-```cmd
+```
 sudo yum install --enablerepo=epel,remi,remi-php73 php-fpm
 ```
 
@@ -94,14 +94,14 @@ sudo yum install --enablerepo=epel,remi,remi-php73 php-fpm
 
 nginxとphp-fpmどちらから設定しても構わないのですがとりあえずphp-fpmの設定から
 
-```cmd
+```
 sudo cp /etc/php-fpm.d/www.conf /etc/php-fpm.d/www.conf.old #念の為オリジナルをバックアップ
 sudo vim /etc/php-fpm.d/www.conf
 ```
 
 25行目前後のuserとgroupをnginxにする。
 
-```nginx
+```
 ; Unix user/group of processes
 ; Note: The user is mandatory. If the group is not set, the default user's group
 ;       will be used.
@@ -118,13 +118,13 @@ pm.max_children、pm.start_servers、pm.min_spare_servers、pm.max_spare_servers
 
 設定が終わったらphp-fpmの起動と自動起動の設定をする。
 
-```cmd
+```
 sudo systemctl start php-fpm
 ```
 
 エラーがなかったら自動起動の設定
 
-```cmd
+```
 sudo systemctl enable php-fpm
 ```
 
@@ -135,17 +135,17 @@ sudo systemctl enable php-fpm
 次にnginxのdefault.confの編集をします。
 
 まずはバックアップ
-```cmd
+```
 sudo cp /etc/nginx/conf.d/default.conf default.conf.old
 ```
-```cmd
+```
 sudo vim /etc/nginx/conf.d/default.conf
 ```
 
 でdefault.confの編集。  
 6行目くらいの
 
-```nginx
+```
  location / {
         root   /usr/share/nginx/html;
         index  index.html index.htm;
@@ -153,7 +153,7 @@ sudo vim /etc/nginx/conf.d/default.conf
 
 を
 
-```nginx
+```
  location / {
         root   /var/www/html;
         index  index.html index.htm index.php;
@@ -162,7 +162,7 @@ sudo vim /etc/nginx/conf.d/default.conf
 indexにindex.phpを追加。rootもapacheで使用していたディレクトリに変更。  
 36行目付近の
 
-```nginx
+```
 
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
     # 
@@ -177,7 +177,7 @@ indexにindex.phpを追加。rootもapacheで使用していたディレクト�
 
 ここのコメントアウトを外して、rootとfastcgi_paramの2箇所を変更します。
 
-```nginx
+```
  # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 
     location ~ \.php$ {
@@ -191,7 +191,7 @@ indexにindex.phpを追加。rootもapacheで使用していたディレクト�
 
 変更して保存したら、構文に間違いがないか確認してなかったらnginxを再起動します。
 
-```cmd
+```
 sudo nginx -t
 sudo systemctl restart nginx
 ```

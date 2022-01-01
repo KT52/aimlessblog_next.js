@@ -12,7 +12,7 @@ Flaskはローカルで使用してたのでデータベースはSQLを直に書
 ## Flask-SQLAlchemyのインストール
 ---
 
-```cmd
+```
 pip install flask-sqlalchemy
 ```
 

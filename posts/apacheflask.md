@@ -25,7 +25,7 @@ CentOS 7.6.1810, Apache 2.4.6、Python3.6.6を使用しています。
 
 下記のようなエラーが出てpip3 install mod_wsgiできないので
 
-```cmd
+```
 
 Command "python setup.py egg_info" failed with error code 1 in /tmp/pip-build-k3z23pb6/mod-wsgi/
 You are using pip version 9.0.3, however version 18.0 is available.
@@ -36,7 +36,7 @@ You should consider upgrading via the 'pip install --upgrade pip' command.
 
 再びmod_wsgiをインストールしようとすると今度は、
 
-```cmd
+```
 
 FileNotFoundError: [Errno 2] No such file or directory: 'apxs'
 ```
@@ -65,7 +65,7 @@ httpd-develをいれてもmod_wsgiがインストールできない場合はエ�
 `/etc/httpd/conf/httpd.conf` に追記するか、`/etc/httpd/conf.d/にwsgi.conf`ファイルを作成して下記のように記述。  
 僕はwsgi.confを新規作成するやり方なので、`vim /etc/httpd/conf.d/wsgi.conf`で
 
-```apache
+```
 # wsgi.conf
 <VirtualHost *:80>
 serverName 11.111.11.111
@@ -136,13 +136,13 @@ if __name__ == "__main__":
 
 
 アクセスしたらInternal Server Errorがでたので/var/log/httpd/error_logを確認したところ、
-```cmd
+```
 ImportError: No module named flask
 ```
 
 まだエラーが出るので再確認
 
-```cmd
+```
 ImportError: No module named werkzeug.exceptions No module named werkzeug.exceptions
 ```
 

@@ -12,7 +12,7 @@ CentOS7でNginx+uWSGI+Flaskを使用したwebアプリのセットアップを�
 
 ## pythonインストール
 
-```cmd
+```
 sudo yum install -y python36 python36-libs python36-devel python36-pip
 ```
 
@@ -20,7 +20,7 @@ sudo yum install -y python36 python36-libs python36-devel python36-pip
 
 仮想環境下でflaskとuwsgiをpipでインストール。
 
-```cmd
+```
 python3.6 -m venv flask_app
 cd flask_app
 . bin/activate
@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
 /etc/nginx/conf.d/flask.conf
 
-```nginx
+```
 server {
     listen 80;
     server_name example.com or IP;
@@ -74,7 +74,7 @@ UNIXドメインソケット/tmp/uwsgi.sockを介してnginxとuwsgiを接続し
 #### uWSGIの設定
 
 以下のコマンドでuwsgiを起動
-```cmd
+```
 uwsgi --socket /tmp/uwsgi.sock --module test --callable app --chmod-socket=666
 ```
 
@@ -99,7 +99,7 @@ callable = app　#デフォルトのWSGI呼び出し可能名を設定する
 %nはuwsgiのマジック変数でファイル名の拡張子を除いた名前（uwsgi）に置き換えられます。  
 `callable`はflaskの`app = Flask(__name__)`のappです。  
 uwsgi.iniを作成したら次のコマンドで起動します。
-```cmd
+```
 uwsgi --ini uwsgi.ini
 ```
 
@@ -118,13 +118,13 @@ vacuum = true
 `vacuum = true` は起動した時、異常終了した時に残っているpidファイルやsocketをクリアする。
 
 /var/log/にuwsgiディレクトリを作成
-```cmd
+```
 sudo mkdir /var/log/uwsgi
 sudo chown -R xxx:xxx uwsgi
 ```
 
 起動、停止、リロード
-```cmd
+```
 uwsgi --ini uwsgi.ini  # 起動
 uwsgi --stop /tmp/flask_app.pid  # 停止
 uwsgi --reload /tmp/flask_app.pid  # リロード
@@ -154,14 +154,14 @@ chdir = /var/www/html/flask_app  #appをロードする前に指定したディ�
 
 手動で起動する場合は以下のコマンドを打って起動
 
-```cmd
+```
 uwsgi --emperor /etc/uwsgi/vassals --logto /var/log/uwsgi/emperor.log
 ```
 
 常に起動しておくためにサービスに登録します。  
 /etc/systemd/system/にuwsgi.serviceを作成。
 
-```cmd
+```
 sudo mkdir /etc/systemd/system/uwsgi.service
 ```
 
@@ -188,7 +188,7 @@ ExecStart=以下のパスはそれぞれの環境で違う場合があると思�
 
 起動、自動起動、リスタート、停止
 
-```cmd
+```
 sudo systemctl start uwsgi
 sudo systemctl enable uwsgi
 sudo systemctl restart uwsgi
@@ -198,7 +198,7 @@ sudo systemctl stop uwsgi
 uwsgi.serviceに間違いがないのにサービスがスタートできない場合は  
 systemdにユニットファイルを追加・更新したことを通知するコマンド
 
-```cmd
+```
 sudo systemctl daemon-reload
 ```
 

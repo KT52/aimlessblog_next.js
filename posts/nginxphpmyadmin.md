@@ -17,7 +17,7 @@ apache使用時に既にインストール済みなのでphpmyadminのインス�
 
 ipアドレスorドメインのみでアクセスする場合
 
-```nginx
+```
 server {
        listen 80;
        server_name ipアドレスorドメイン;
@@ -37,7 +37,7 @@ server {
 
 ipアドレスorドメイン/phpmyadminでアクセスする場合の設定。
 
-```nginx
+```
 server {
        listen 80;
        server_name  ipアドレスorドメイン;
@@ -62,21 +62,21 @@ nginxを再起動してphpmyadminにアクセス。
 
 1. /usr/share/phpMyAdminディレクトリの所有者とグループを変更する。
 
-```cmd
+```
 chown -R nginx:nginx /usr/share/phpMyAdmin
 ```
 
 2. php.iniにセッションパスの定義をする。
 
-```cmd
+```
 sudo vim /etc/php.ini
 ```
 
-```cmd
+```
 session.save_path = "/var/lib/php/session"
 ```
 
-```cmd
+```
 chown -R nginx:nginx /var/lib/php/session
 ```
 
@@ -84,7 +84,7 @@ chown -R nginx:nginx /var/lib/php/session
 
 confファイルにどう書いてもうまく行かないときはrootディレクトリにシンボリックリンクを貼りましょう。
 
-```cmd
+```
 cd /var/www/html
 ln -s /usr/share/phpMyAdmin phpmyadmin
 ```

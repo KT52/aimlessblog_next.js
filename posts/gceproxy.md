@@ -30,7 +30,7 @@ vim /etc/squid/squid.conf
 
 26行目付近の`acl CONNECT method CONNECT`の下に
 
-```apache
+```
 
 auth_param basic program /usr/lib64/squid/basic_ncsa_auth /etc/squid/passwd
 auth_param basic realm Squid proxy-caching web server
@@ -43,14 +43,14 @@ acl password proxy_auth REQUIRED
 
 63行目付近の
 
-```apache
+```
 # And finally deny all other access to this proxy
 http_access deny all
 
 ```
 
 に1行追加して
-```apache
+```
 # And finally deny all other access to this proxy
 http_access allow password
 http_access deny all
@@ -61,7 +61,7 @@ http_access deny all
    
 デフォルトのポート番号3128を他の番号に変更するので67行目付近の`http_port 3128`をコメントアウトして新しいポート番号を追加。
 
-```apache
+```
 # Squid normally listens to port 3128
 #http_port 3128
 http_port 35488
@@ -69,7 +69,7 @@ http_port 35488
 
 後はsquid.confの最下行に以下を追加。
 
-```apache
+```
 # プロキシサーバーを使用している端末のローカルIPアドレスを隠蔽化
 forwarded_for off
 visible_hostname unknown
@@ -99,7 +99,7 @@ yum install httpd-tools
 ```
 
 インストールしたらユーザーネームとパスワードを設定するので
-```apache
+```
 htpasswd -c /etc/squid/passwd ユーザーネーム
 ```
 

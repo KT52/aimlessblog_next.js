@@ -14,7 +14,7 @@ cssフレームワークのBootstrapとfoundationに対応しています。
 ## インストール
 ---
 
-```cmd
+```
 pip install -U flask-paginate
 ```
 

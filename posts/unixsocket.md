@@ -16,11 +16,11 @@ NginxとPHP-FPMの通信をデフォルトのTCPからUNIX ドメインソケッ
 
 まずはdefault.confから編集。
 
-```cmd
+```
 sudo vim /etc/nginx/conf.d/default.conf
 ```
 
-```nginx
+```
  location ~ \.php$ {
         root           /var/www/html/;
         #fastcgi_pass   127.0.0.1:9000;
@@ -37,13 +37,13 @@ fastcgi_passを変更します。
 
 次にwww.confを編集します。
 
-```cmd
+```
 sudo vim /etc/php-fpm.d/www.conf
 ```
 
 - 変更箇所その１
 
-```nginx
+```
 ;listen = 127.0.0.1:9000　コメントアウトする
 listen = /run/php-fpm/php-fpm.sock
 ```
@@ -52,7 +52,7 @@ listen = /run/php-fpm/php-fpm.sock
 
 - 変更箇所その２
 
-```nginx
+```
 ;listen.owner = nginx
 ;listen.group = nginx
 ;listen.mode = 0660
@@ -67,11 +67,11 @@ listen.mode = 0660
 
 変更したらphp-fpmとnginxを再起動します。
 
-```cmd
+```
 sudo systemctl restart php-fpm
 ```
 
-```cmd
+```
 sudo systemctl restart nginx
 ```
 

@@ -20,7 +20,7 @@ def searchPage():
 #以下略
 ```
 
-```cmd
+```
 sqlite3.ProgrammingError: Incorrect number of bindings supplied. The current statement uses 0, and there are 1 supplied.
 ```
 
