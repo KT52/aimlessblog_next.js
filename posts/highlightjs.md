@@ -30,6 +30,8 @@ remarkとrehypeの違いについては[Next.js のための Remark / Rehype 入
 npm install unified remark-parse remark-rehype rehype-highlight rehype-stringify
 ```
 
+テーブル変換は今まで通り`remark-gfm`を使用します。
+
 ## remarkからrehypeへ
 
 remark
@@ -56,10 +58,12 @@ import remarkParse from 'remark-parse';
 import remarkRehype from 'remark-rehype';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeStringify from 'rehype-stringify';
+import gfm from "remark-gfm";
 
 const processedContent = await unified()
     .use(remarkParse)
     .use(remarkRehype)
+    .use(gfm)
     .use(rehypeHighlight)
     .use(rehypeStringify)
     .process(matterResult.content);
