@@ -46,7 +46,8 @@ Serverless Functionsはapiディレクトリにサポートされている言語
 ```txt
 fastapi-vercel
     |--api/
-    |   |--index.py
+    |   |-- __init.py__
+    |   |-- index.py
     |
     |--requirements.txt
     |--vercel.json
@@ -124,11 +125,12 @@ dbファイルはfastapi-vercel/dbに置きます。
 ```txt
 fastapi-vercel
     |--api/
-    |   |--index.py
-    |   |--database.py
-    |   |--model.py
-    |   |--crud.py
-    |   |--schemas.py
+    |   |-- __init.py__
+    |   |-- index.py
+    |   |-- database.py
+    |   |-- model.py
+    |   |-- crud.py
+    |   |-- schemas.py
     |
     |--db/
     |   |--book.db
