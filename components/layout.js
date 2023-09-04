@@ -20,7 +20,10 @@ export default function Layout({ children, home, tags }) {
           contente="https://www.ravness.com/squigly_3.png"
         />
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="summary" />
+        <meta property="og:image:alt" content="{siteTitle}" />
+        <meta property="og:image:width" content="600" />
+        <meta property="og:image:height" content="315" />
       </Head>
       <header className={styles.header}>
         {home ? (
