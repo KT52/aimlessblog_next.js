@@ -11,13 +11,14 @@ export default function Layout({ children, home, tags }) {
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:type" content="article" />
         <meta
           name="description"
           content="Webアプリ制作やWebサービスの覚え書きブログ"
         />
         <meta
           property="og:image"
-          contente="/squigly_3.png"
+          contente="https://www.ravness.com/squigly_3.png"
         />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary" />
