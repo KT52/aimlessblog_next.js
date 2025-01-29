@@ -47,7 +47,7 @@ export default function Post({ postData }) {
           responsive="true"
           layoutKey="-gw-1+2a-9x+5c"
         />
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div className="article" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
       <Social slug={postData.slug} title={postData.title} />
       <AdSense.Google

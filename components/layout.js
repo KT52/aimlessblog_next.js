@@ -64,7 +64,7 @@ export default function Layout({ children, home, tags }) {
         </div>
       )}
       <footer className={styles.footer}>
-        <div>Copyright &copy; ravness.com 2023 All rights reserved.</div>
+        <div>Copyright &copy; ravness.com 2025 All rights reserved.</div>
         <div>
           <Link href="/privacypolicy">
             <a>Privacy Policy</a>
