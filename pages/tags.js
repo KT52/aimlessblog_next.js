@@ -25,7 +25,7 @@ export default function Tags({allTags}) {
             {allTags.map((tag) => (
               <li className={utilStyles.tagsItem} key={tag}>
                 <Link href={`/tags/${encodeURIComponent(tag)}`}>
-                  <a>{tag}</a>
+                  {tag}
                 </Link>
               </li>
             ))}

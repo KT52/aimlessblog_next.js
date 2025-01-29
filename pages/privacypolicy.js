@@ -27,7 +27,7 @@ export default function Privacy() {
         当サイトは著作権の侵害を目的とするものではありません。使用している版権物の知的所有権は、それぞれの著作者・団体に帰属しております。著作権や肖像権に関して問題がありましたらご連絡下さい。著作権所有者様からの警告及び修正・撤去のご連絡があった場合は、迅速に対処または削除いたします。
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            ← Back to home
           </Link>
         </div>
       </div>

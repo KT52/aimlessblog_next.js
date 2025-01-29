@@ -24,7 +24,7 @@ export default function TagsPosts({ postData,tag }) {
               </small>
               <br />
               <Link href={`/posts/${encodeURIComponent(id)}`}>
-                <a>{title}</a>
+                {title}
               </Link>
             </li>
           ))}
@@ -32,7 +32,7 @@ export default function TagsPosts({ postData,tag }) {
       </section>
       <div className={styles.backToHome}>
         <Link href="/tags">
-          <a>← Back to Tags</a>
+          ← Back to Tags
         </Link>
       </div>
     </Layout>

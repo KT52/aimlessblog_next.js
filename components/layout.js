@@ -38,7 +38,7 @@ export default function Layout({ children, home, tags }) {
           </>
         ) : (
           <>
-            {/*<Link href="/">
+            {/*<Link href="/" legacyBehavior>
               <a>
                 <img
                   src="/images/profile.jpg"
@@ -48,7 +48,7 @@ export default function Layout({ children, home, tags }) {
               </a>
         </Link>*/}
             <h2 className={utilStyles.headingLg}>
-              <Link href="/">
+              <Link href="/" legacyBehavior>
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
             </h2>
@@ -59,7 +59,7 @@ export default function Layout({ children, home, tags }) {
       {!home && !tags && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            ← Back to home
           </Link>
         </div>
       )}
@@ -67,7 +67,7 @@ export default function Layout({ children, home, tags }) {
         <div>Copyright &copy; ravness.com 2025 All rights reserved.</div>
         <div>
           <Link href="/privacypolicy">
-            <a>Privacy Policy</a>
+            Privacy Policy
           </Link>
         </div>
       </footer>

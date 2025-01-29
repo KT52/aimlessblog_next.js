@@ -7,7 +7,7 @@ export default function Page({pageIndex,total,setPageIndex}) {
     <div className={utilStyles.pagination}>
       <div>
         {pageIndex > 1 ? (
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a onClick={() => setPageIndex(pageIndex - 1)}>Prev</a>
           </Link>
         ) : (
@@ -17,7 +17,7 @@ export default function Page({pageIndex,total,setPageIndex}) {
       <span className={utilStyles.next}>
         {/* Math.floorで切り捨てMath.ceilで切り上げ */}
         {pageIndex !== Math.ceil(total / 10) ? (
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a onClick={() => setPageIndex(pageIndex + 1)}>Next</a>
           </Link>
         ) : (

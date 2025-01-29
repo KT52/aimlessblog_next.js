@@ -31,9 +31,7 @@ export default function Home({allPostsData}) {
           Webアプリ制作やWebサービスの覚え書きブログ
         </p>
         <p>
-          <Link href="/tags">
-            <a>Tag</a>
-          </Link>
+          <Link href="/tags">Tag</Link>
         </p>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -47,9 +45,7 @@ export default function Home({allPostsData}) {
                   <Date dateString={date} />
                 </small>
                 <br />
-                <Link href={`/posts/${encodeURIComponent(id)}`}>
-                  <a>{title}</a>
-                </Link>
+                <Link href={`/posts/${encodeURIComponent(id)}`}>{title}</Link>
               </li>
             ))}
         </ul>
@@ -57,7 +53,7 @@ export default function Home({allPostsData}) {
         <div className={utilStyles.pagination}>
           <div>
             {pageIndex > 1 ? (
-              <Link href="/">
+              <Link href="/" legacyBehavior>
                 <a onClick={() => setPageIndex(pageIndex - 1)}>Prev</a>
               </Link>
             ) : (
@@ -67,7 +63,7 @@ export default function Home({allPostsData}) {
           <span className={utilStyles.next}>
             {/* Math.floorで切り捨てMath.ceilで切り上げ */}
             {pageIndex !== Math.ceil(total / 10) ? (
-              <Link href="/">
+              <Link href="/" legacyBehavior>
                 <a onClick={() => setPageIndex(pageIndex + 1)}>Next</a>
               </Link>
             ) : (

@@ -28,12 +28,15 @@ export default function Post({ postData }) {
         <div>
           <div className={utilStyles.taglist}>Tag:</div>
           {!Array.isArray(postData.tag) ? (
-            <Link href={`/tags/${encodeURIComponent(postData.tag)}`}>
+            <Link
+              href={`/tags/${encodeURIComponent(postData.tag)}`}
+              legacyBehavior
+            >
               <a className={utilStyles.taglist}>{postData.tag}</a>
             </Link>
           ) : (
             postData.tag.map((tag) => (
-              <Link href={`/tags/${encodeURIComponent(tag)}`}>
+              <Link href={`/tags/${encodeURIComponent(tag)}`} legacyBehavior>
                 <a className={utilStyles.taglist}>{tag}</a>
               </Link>
             ))
@@ -47,7 +50,10 @@ export default function Post({ postData }) {
           responsive="true"
           layoutKey="-gw-1+2a-9x+5c"
         />
-        <div className="article" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className="article"
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
       <Social slug={postData.slug} title={postData.title} />
       <AdSense.Google
